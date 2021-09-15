@@ -18,6 +18,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        // initializing variables
         Account account = null;
         GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeDeserializer());
@@ -30,13 +31,13 @@ public class Main {
                 new DoubleTransactionRule());
         List<String> violations;
 
+        // reading the file from path passed as argument
         String pathToFile = args[0];
-        System.out.println("Path to file = " + pathToFile);
         File file = new File(pathToFile);
         InputStream is = new FileInputStream(file);
-
         List<String> lines = IOUtils.readLines(is, "UTF-8");
 
+        // processing the file
         for (String line: lines) {
             if(line.startsWith("{\"account")) {
                 if (account == null) {
