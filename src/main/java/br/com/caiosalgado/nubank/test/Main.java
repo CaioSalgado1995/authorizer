@@ -57,6 +57,9 @@ public class Main {
                         rule.validate(account, transactionOperation);
                     } catch (RuntimeException ex) {
                         violations.add(ex.getMessage());
+                        if(ex.getMessage().equals(AccountNotInitializedRule.ERROR_CODE)) {
+                            break;
+                        }
                     }
                 }
                 if(violations.size() == 0) {
