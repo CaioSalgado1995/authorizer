@@ -22,7 +22,6 @@ public class HighFrequencySmallIntervalRule implements TransactionRule {
                     .sorted(Comparator.comparing(Transaction::getTime).reversed())
                     .limit(3)
                     .collect(Collectors.toList());
-            System.out.println(orderedSuccessfulTransaction);
             for (Transaction t: orderedSuccessfulTransaction) {
                 if(t.getTime().isAfter(validOperationTime)) {
                     operationsInsideInterval ++;
