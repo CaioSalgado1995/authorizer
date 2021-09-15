@@ -1,3 +1,8 @@
+## Author
+- Caio Luiz Salgado
+- caiosalgado1995@gmail.com
+- 41 996656307
+
 ## What do you need to setup this application?
 
 - JDK/Java 9
