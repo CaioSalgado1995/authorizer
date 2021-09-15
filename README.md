@@ -1,6 +1,6 @@
 ## What do you need to setup this application?
 
-- JDK/Java 11
+- JDK/Java 9
 - Maven 3.6.2
 
 ## External dependencies used
@@ -16,4 +16,4 @@ Passing the path to find the file you want to test.
 mvn compile exec:java -Dexec.arguments="/Users/caiosalgado/Desktop/operations.txt"
 ```
 
-* Remember that unix file path starts with **/** like  and windows file path starts with **C://**
+* Remember that unix file path starts with **/** like the example above and windows file path starts with **C://**
