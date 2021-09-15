@@ -5,7 +5,7 @@
 
 ## What do you need to setup this application?
 
-- JDK/Java 9
+- JDK/Java 9 or higher
 - Maven 3.6.2
 
 ## External dependencies used
